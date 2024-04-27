@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
        {/* <Banner/> */}
-       <div className="w-[70%] mx-auto">
+       <div className="md:w-[70%] w-[80%] mx-auto">
          <CraftSection/>
        </div>
     </div>

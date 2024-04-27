@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
 
 const AddCraft = () => {
@@ -33,25 +33,25 @@ const AddCraft = () => {
     console.log(newCraft);
 
 
-    //  fetch("http://localhost:5000/coffees",{
-    //    method:"POST",
-    //    headers:{
-    //     "content-type":"application/json"
-    //    },
-    //    body:JSON.stringify(coffeeInfo)
-    //  })
-    //  .then(res=> res.json())
-    //  .then(data =>{
-    //     if(data){
-    //       Swal.fire({
-    //         title: "Added!",
-    //         text: "Your coffee item has been added.",
-    //         icon: "success"
-    //       });
-    //       //  e.target.reset();
-    //        console.log(data);
-    //     }
-    //  })
+     fetch("http://localhost:4000/allCrafts",{
+       method:"POST",
+       headers:{
+        "content-type":"application/json"
+       },
+       body:JSON.stringify(newCraft)
+     })
+     .then(res=> res.json())
+     .then(data =>{
+        if(data.insertedId){
+          Swal.fire({
+            title: "Added!",
+            text: "Your craft item has been added.",
+            icon: "success"
+          });
+          //  e.target.reset();
+           console.log(data);
+        }
+     })
   };
 
   return (
