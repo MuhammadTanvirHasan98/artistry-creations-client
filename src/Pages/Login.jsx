@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import { Helmet } from "react-helmet";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
+import wave from '../assets/wave.svg'
 
 
 const Login = () => {
@@ -54,13 +55,15 @@ const Login = () => {
       <Helmet>
          <title>Login | Artistry Creations</title>
       </Helmet>
-      <div className="hero-content mx-auto flex-col">
+      <div className="hero-content relative md:w-1/2 w-[90%] mx-auto flex-col border-2 border-purple-500">
+      <img className="absolute bottom-0 w-full h-[30vh]"  src={wave} alt="" />
         <div className="text-center lg:text-left">
           <h1 className="md:text-5xl text-4xl font-bold text-indigo-600">Welcome back!</h1>
         </div>
 
         {/* Login section */}
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-indigo-500 ">
+        <div className="card  shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-indigo-500 ">
+       
           {/* Login Form start from here */}
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">

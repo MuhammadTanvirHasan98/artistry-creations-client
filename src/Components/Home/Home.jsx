@@ -1,11 +1,13 @@
-import Banner from "./Banner/Banner";
+// import Banner from "./Banner/Banner";
 import CraftSection from "./CraftSection/CraftSection";
 
 const Home = () => {
   return (
     <div>
        {/* <Banner/> */}
-       <CraftSection/>
+       <div className="w-[70%] mx-auto">
+         <CraftSection/>
+       </div>
     </div>
   );
 };
