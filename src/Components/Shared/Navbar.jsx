@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import { HiHomeModern } from "react-icons/hi2";
 import { UseAuthContext } from "../../Firebase/FirebaseAuth/FirebaseProvider";
-
+import logo from '../../assets/logo1.png'
 
 const Navbar = () => {
   const { user, logOut } = UseAuthContext();
@@ -42,7 +41,7 @@ const Navbar = () => {
               ? "btn font-bold border-2 border-indigo-600 text-indigo-700"
               : "font-bold btn text-sky-600"
           }
-          to="/userProfile"
+          to="/addCraft"
         >
          Add Art&Craft
         </NavLink>
@@ -55,7 +54,7 @@ const Navbar = () => {
               ? "btn font-bold border-2 border-indigo-600 text-indigo-700"
               : "font-bold btn text-sky-600"
           }
-          to="/userProfile"
+          to="/myList"
         >
          My Art&Craft List
         </NavLink>
@@ -65,18 +64,18 @@ const Navbar = () => {
 
   return (
     <div className="relative z-10">
-      <div className="navbar p-0 mt-2 lg:mt-4 border-2 border-blue-400 bg-gradient-to-r from-blue-400 to-white flex justify-between">
-        <div className="navbar-start ">
+      <div className="navbar p-0 border-2 border-blue-400 bg-gradient-to-r from-blue-50 to-white flex justify-between lg:px-20 md:px-10 px-3">
+        <div className="navbar-start w-full">
           {/* Navbar left section */}
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="btn px-0 mr-2 btn-ghost lg:hidden"
+              className="btn btn-sm px-0 mr-1 btn-ghost lg:hidden flex"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 text-indigo-600"
+                className="h-8 w-8 text-indigo-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -99,25 +98,22 @@ const Navbar = () => {
           </div>
           <Link to="/">
             <div className="flex items-center">
-              <HiHomeModern className="text-5xl text-indigo-600 lg:text-7xl" />
-              <div className=" bg-gradient-to-r from-indigo-200  px-1 border-2 border-blue-500">
-                <h1 className="text-indigo-800  lg:text-2xl text-sm font-bold">
-                  Muhammad <br />
-                  <span className="lg:text-xl text-indigo-600 flex justify-center text-[12px]   md:tracking-extra-wide tracking-widest ">
-                    Real Estate
-                  </span>
+             
+              <img className="w-[30px] h-[26px]" src={logo} alt="logo" />
+
+                <h1 className="  lg:text-3xl text-xl font-bold text-indigo-600 flex justify-center text-[12px] tracking-wide bg-gradient-to-r from-primary via-blue-500 to-secondary bg-300% text-transparent bg-clip-text animate-gradient">
+                    Artistry Creations
                 </h1>
-              </div>
             </div>
           </Link>
         </div>
 
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex mr-10">
           <ul className=" flex gap-2">{navLinks}</ul>
         </div>
 
         {user ? (
-          <div className="flex justify-end w-[30%]">
+          <div className="flex justify-end md:w-[70%]">
             <div className="dropdown dropdown-hover">
               <div tabIndex={0} role="button" className="m-1">
               <img
