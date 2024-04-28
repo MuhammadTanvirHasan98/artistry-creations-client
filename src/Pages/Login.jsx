@@ -16,6 +16,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const goToThere = location?.state || "/" ;
+  // console.log(location);
 
   const handleLogin = (e) => {
     e.preventDefault();
