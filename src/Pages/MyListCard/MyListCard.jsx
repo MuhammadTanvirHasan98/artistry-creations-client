@@ -1,17 +1,22 @@
-import { IoStarOutline } from "react-icons/io5";
+import { GrStarOutline } from "react-icons/gr";
 import { MdEditSquare, MdOutlinePriceChange } from "react-icons/md";
 import { RiDeleteBin3Fill } from "react-icons/ri";
+import PropTypes from "prop-types"
+import { Link } from "react-router-dom";
 
-const MyListCard = () => {
+const MyListCard = ({craft}) => {
+   
+   const{image, item_name, customization, stock_status, price, rating} = craft;
+
   return (
     <div className="">
       <div className=" hover:bg-slate-100  rounded-lg shadow-xl">
         {/* Card Image */}
         <figure className="xl:px-8 xl:pt-8 px-5 pt-5">
           <img
-            src="https://i.ibb.co/Pg89NR4/stoneware1-png.jpg"
-            alt="Shoes"
-            className="rounded-xl w-full"
+            src={image}
+            alt="craft_image"
+            className="rounded-xl w-full xl:h-[300px] md:h-[220px] h-[280px]"
           />
         </figure>
 
@@ -21,13 +26,13 @@ const MyListCard = () => {
             <div className="bg-gradient-to-br from-green-100 via-purple-100 to-blue-100 text-indigo-600 p-2 font-bold flex justify-between text-sm hover:text-purple-700 rounded-b-lg">
               <div className="flex gap-4">
                 <p className="flex items-center gap-1">
-                  <IoStarOutline />
-                  4.5
+                  <GrStarOutline />
+                  {rating}
                 </p>
               </div>
               <p className="flex items-center gap-1">
                 <MdOutlinePriceChange className="text-xl" />
-                3000
+                {price}
               </p>
             </div>
           </div>
@@ -35,21 +40,27 @@ const MyListCard = () => {
          {/* Cards Info */}
          <div className="text-lg">
           <h2 className="md:text-2xl text-3xl   font-semibold text-center mb-2">
-           Clay ceramics and beauty
+           {item_name}
           </h2>
           <p>
             Customization option:{" "}
-            <span className="font-bold text-yellow-600">Yes</span>
+            <span className="font-bold text-yellow-600">{customization}</span>
           </p>
           <p>
             Stock Status:{" "}
-            <span className="font-bold text-yellow-600">In stock</span>
+            <span className="font-bold text-yellow-600">{stock_status}</span>
           </p>
          </div>
          {/* Buttons */}
           <div className="flex justify-center gap-3 mt-2" >
+            <Link>
             <button className="btn btn-outline btn-error text-2xl"><RiDeleteBin3Fill /></button>
+            </Link>
+
+            <Link>
             <button className="btn btn-outline btn-primary text-2xl"><MdEditSquare /></button>
+            </Link>
+          
           </div>
         </div>
       </div>
@@ -58,3 +69,8 @@ const MyListCard = () => {
 };
 
 export default MyListCard;
+
+
+MyListCard.propTypes = {
+   craft: PropTypes.object
+}

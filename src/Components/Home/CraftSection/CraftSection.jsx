@@ -22,7 +22,7 @@ const CraftSection = () => {
           Art & Craft Items
         </h1>
         <hr className="xl:w-1/3 md:w-1/2 w-2/3 border-dashed border-purple-800 my-2 mx-auto" />
-        <p className="text-gray-500 ">
+        <p className="text-blue-600">
         Welcome to the enchanting world of Artistry Creations, where creativity knows no bounds! Whether you are drawn to the delicate elegance of ceramics or the timeless allure of pottery.
        
         </p>

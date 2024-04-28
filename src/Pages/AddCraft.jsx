@@ -57,7 +57,7 @@ const AddCraft = () => {
   return (
     <div className="md:w-[80%] mx-auto my-20">
       <Helmet>
-        <title>Add Card | Artistry Creations</title>
+        <title>Add Art&Craft | Artistry Creations</title>
       </Helmet>
       <Link to="/">
         <h1 className="flex items-center gap-2 text-2xl coff font-bold ml-6">

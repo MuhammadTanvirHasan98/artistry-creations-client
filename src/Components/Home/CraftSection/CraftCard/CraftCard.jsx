@@ -1,5 +1,4 @@
 import { IoStarOutline } from "react-icons/io5";
-import {  FaRegEye } from "react-icons/fa";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types"
@@ -23,7 +22,7 @@ const CraftCard = ({craft}) => {
 
       {/* Card image */}
       <div data-aos="zoom-in" className="rounded-xl">
-        <img className="w-full xl:h-[330px] md:h-[220px] h-[280px] rounded-t-2xl" src={image} alt="img" />
+        <img className="w-full xl:h-[330px] md:h-[220px] h-[280px] rounded-t-2xl" src={image} alt="craft_img" />
 
         <div className="bg-gradient-to-br from-green-100 via-purple-100 to-blue-100 text-indigo-600 p-2 font-bold flex justify-between text-sm hover:text-purple-700">
           <div className="flex gap-4">
@@ -41,10 +40,10 @@ const CraftCard = ({craft}) => {
       {/* Cards Info */}
       <div className="p-4 pt-1 text-center">
         <div data-aos="flip-up">
-          <h2 className="lg:text-2xl text-xl font-bold play tracking-wide bg-gradient-to-r from-blue-600 via-yellow-600 to-purple-600 bg-300% text-transparent bg-clip-text animate-gradient">
+          <h2 className="lg:text-2xl text-xl font-bold play tracking-wide bg-gradient-to-r from-primary via-[#77B0AA] to-purple-500 bg-300% text-transparent bg-clip-text animate-gradient">
             {item_name}
           </h2>
-          <p className="text-gray-900 hover:text-purple-950 hover:font-semibold">{short_description}</p>
+          <p className="text-[#65aba4] hover:text-purple-950 hover:font-semibold">{short_description}</p>
         </div>
 
           <hr className="border-dashed border-indigo-600 w-[95%] mx-auto my-2" />
@@ -52,7 +51,7 @@ const CraftCard = ({craft}) => {
         <div data-aos="fade-up" className="flex justify-center">
           <Link to={`/craftDetails/${_id}`}>
             <button className="btn btn-outline text-indigo-600 hover:text-indigo-100 hover:bg-indigo-600 font-bold">
-              View<FaRegEye className="text-xl"/> Details
+              View Details
             </button>
           </Link>
         </div>

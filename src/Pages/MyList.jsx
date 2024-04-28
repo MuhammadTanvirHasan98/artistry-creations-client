@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
 import MyListCard from "./MyListCard/MyListCard";
+import { Helmet } from "react-helmet";
 
 
 const MyList = () => {
@@ -23,6 +24,13 @@ const MyList = () => {
 
   return (
     <div className="md:w-[70%] w-[80%] mx-auto my-20 text-center">
+        
+        <Helmet>
+         <title>
+            My Art&Craft List | Artistry Creations
+          </title>
+        </Helmet>
+
          <div className="lg:w-[70%] md:w-[80%] w-[95%] mx-auto mb-10">
         <h1 className="md:text-5xl text-4xl font-bold text-purple-800">
           My Art&Craft List

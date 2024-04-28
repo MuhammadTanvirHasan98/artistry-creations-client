@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoEyeOutline } from "react-icons/io5";
 import { Tooltip } from "react-tooltip";
+import { Helmet } from "react-helmet";
 
 const AllCrafts = () => {
   const [crafts, setCrafts] = useState([]);
@@ -19,6 +20,12 @@ const AllCrafts = () => {
 
   return (
     <div className="md:w-[70%] w-[95%] mx-auto my-20">
+        <Helmet>
+         <title>
+            All Art&Craft | Artistry Creations
+          </title>
+        </Helmet>
+
       <h1 className="lg:text-5xl md:text-4xl text-3xl text-purple-800 text-center mb-10">
         All Art & Craft are here
       </h1>
