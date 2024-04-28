@@ -1,22 +1,22 @@
-// import { useEffect, useState } from "react";
-// import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
+import { useEffect, useState } from "react";
+import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
 
 
 const MyList = () => {
-  // const {user} = UseAuthContext();
+  const {user} = UseAuthContext();
 
 
-  // const [crafts, setCrafts] = useState([]);
+  const [crafts, setCrafts] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:4000/allCrafts/${user?.email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setCrafts(data);
-  //     });
-  // }, [user]);
+  useEffect(() => {
+    fetch(`http://localhost:4000/allCrafts/email/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCrafts(data);
+      });
+  }, [user]);
 
-  // console.log(crafts);
+  console.log(crafts);
 
   return (
     <div>

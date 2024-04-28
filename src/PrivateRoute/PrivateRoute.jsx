@@ -38,3 +38,12 @@ export default PrivateRoute;
 PrivateRoute.propTypes = {
   children: PropTypes.object,
 };
+
+//https://i.ibb.co/ScPqhdG/ceramics-Architectural.jpg
+//https://i.ibb.co/dj6MWBH/home-Decor.png
+//https://i.ibb.co/31z3T9h/porcelain.jpg
+//https://i.ibb.co/SJfmC3d/pottery-handmade.jpg
+//https://i.ibb.co/Y3f3dbd/stoneware.jpg
+//https://i.ibb.co/Z68xSgj/teracotta.png
+//
+//https://i.ibb.co/Pg89NR4/stoneware1-png.jpg

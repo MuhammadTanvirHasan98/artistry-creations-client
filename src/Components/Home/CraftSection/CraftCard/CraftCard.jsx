@@ -19,7 +19,7 @@ const CraftCard = ({craft}) => {
   } = craft;
 
   return (
-    <div className="card hover:border-2  border-indigo-400 ease-in  hover:scale-105 transition transform duration-500 md:w-full hover:shadow-xl hover:bg-gradient-to-tr from-yellow-50 via-purple-50 to-orange-50">
+    <div className="card text-pretty hover:border-2  border-indigo-400 ease-in  hover:scale-105 transition transform duration-500 md:w-full hover:shadow-xl hover:bg-gradient-to-tr from-yellow-50 via-purple-50 to-orange-50">
 
       {/* Card image */}
       <div data-aos="zoom-in" className="rounded-xl">
