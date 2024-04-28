@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CraftCard from "./CraftCard/CraftCard";
+import { Link } from "react-router-dom";
 
 
 const CraftSection = () => {
@@ -15,10 +16,11 @@ const CraftSection = () => {
    },[])
 
    console.log(crafts);
+
+   
    
   return (
     <div className="my-20">
-      <h1 className="text-center">{crafts.length}</h1>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-8">
 
        {
@@ -30,7 +32,15 @@ const CraftSection = () => {
         ))
        }
     </div>
-
+ 
+    <div className="mt-16 text-center">
+    <Link to='/allArtAndCraft'>
+            <button className="btn btn-outline text-indigo-600 hover:text-indigo-100 hover:bg-indigo-600 font-bold px-8 text-xl">
+               Explore More
+            </button>
+          </Link>
+    </div>
+     
     </div>
   );
 };

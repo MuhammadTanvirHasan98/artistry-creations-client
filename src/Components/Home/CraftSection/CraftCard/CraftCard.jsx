@@ -17,7 +17,6 @@ const CraftCard = ({craft}) => {
     price,
     short_description
   } = craft;
-  console.log(image)
 
   return (
     <div className="card hover:border-2  border-indigo-400 ease-in  hover:scale-105 transition transform duration-500 md:w-full hover:shadow-xl hover:bg-gradient-to-tr from-yellow-50 via-purple-50 to-orange-50">
@@ -45,13 +44,13 @@ const CraftCard = ({craft}) => {
           <h2 className="lg:text-2xl text-xl font-bold play tracking-wide bg-gradient-to-r from-blue-600 via-yellow-600 to-purple-600 bg-300% text-transparent bg-clip-text animate-gradient">
             {item_name}
           </h2>
-          <p className="text-gray-900 hover:text-purple-950">{short_description}</p>
+          <p className="text-gray-900 hover:text-purple-950 hover:font-semibold">{short_description}</p>
         </div>
 
           <hr className="border-dashed border-indigo-600 w-[95%] mx-auto my-2" />
 
         <div data-aos="fade-up" className="flex justify-center">
-          <Link to='/'>
+          <Link to={`/craftDetails/${_id}`}>
             <button className="btn btn-outline text-indigo-600 hover:text-indigo-100 hover:bg-indigo-600 font-bold">
               View<FaRegEye className="text-xl"/> Details
             </button>

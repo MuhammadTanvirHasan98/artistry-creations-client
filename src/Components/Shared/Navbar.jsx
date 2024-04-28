@@ -30,7 +30,7 @@ const Navbar = () => {
           }
           to="/allArtAndCraft"
         >
-          All Art&Craft Items
+          All Art&Craft
         </NavLink>
       </li>
 

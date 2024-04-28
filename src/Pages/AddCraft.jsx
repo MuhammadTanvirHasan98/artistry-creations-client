@@ -65,7 +65,7 @@ const AddCraft = () => {
           Back to Home
         </h1>
       </Link>
-      <div className="bg-[#F4F3F0] md:p-10 p-6 my-4 rounded-lg md:w-[80%] w-[92%] mx-auto">
+      <div className="bg-[#F4F3F0] md:p-10 p-6 my-4 rounded-lg md:w-[80%] w-[92%] mx-auto border-2 border-purple-300 bg-gradient-to-br from-blue-200 via-blue-50 to-purple-200">
         <div className="text-center">
           <h1 className="md:text-4xl text-3xl coff font-bold text-orange-800">
             Add New Craft
@@ -127,12 +127,12 @@ const AddCraft = () => {
                   className="select select-bordered select-warning text-orange-700"
                 >
                   <option>Options</option>
-                  <option value="01">Clay-made pottery</option>
-                  <option value="02">Stoneware</option>
-                  <option value="03">Porcelain</option>
-                  <option value="04">Terra Cotta</option>
-                  <option value="05">Ceramics & Architectural</option>
-                  <option value="06">Home decor pottery</option>
+                  <option value="Clay-made pottery">Clay-made pottery</option>
+                  <option value="Stoneware">Stoneware</option>
+                  <option value="Porcelain">Porcelain</option>
+                  <option value="Terra Cotta">Terra Cotta</option>
+                  <option value="Ceramics & Architectural">Ceramics & Architectural</option>
+                  <option value="Home decor pottery">Home decor pottery</option>
                 </select>
               </div>
 
@@ -229,11 +229,11 @@ const AddCraft = () => {
                   </span>
                 </label>
 
-                <div className="border-2 border-yellow-400 rounded-xl pl-1">
+                <div className="border-2 border-yellow-400 rounded-lg">
                   <input
                     type="text"
                     name="userName"
-                    className="input input-bordered input-warning text-orange-700"
+                    className="input input-bordered input-warning text-orange-700 w-full"
                     disabled={true}
                     value={user?.displayName}
                   />
@@ -248,11 +248,11 @@ const AddCraft = () => {
                   </span>
                 </label>
 
-                <div className="border-2 border-yellow-400 rounded-xl pl-1">
+                <div className="border-2 border-yellow-400 rounded-lg">
                   <input
                     type="text"
                     name="userEmail"
-                    className="input input-bordered input-warning text-orange-700"
+                    className="input input-bordered input-warning text-orange-700 w-full"
                     disabled={true}
                     value={user?.email}
                   />
