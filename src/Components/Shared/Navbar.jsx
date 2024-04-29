@@ -206,14 +206,14 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="navbar-end lg:flex gap-2">
-            <Link to="/register">
-              <button className="btn btn-sm md:btn-md border-blue-500 bg-sky-400 font-bold text-white">
-                Register
+            <Link to="/login">
+              <button className="btn btn-sm md:btn-md btn-outline border-blue-500 mr-2 font-bold text-blue-600">
+                Login
               </button>
             </Link>
-            <Link to="/login">
-              <button className="btn btn-sm md:btn-md border-blue-500 mr-2 bg-sky-400 font-bold text-white">
-                Login
+            <Link to="/register">
+              <button className="btn btn-sm md:btn-md border-blue-500 bg-sky-400 hover:text-blue-500 hover:bg-white font-bold text-white">
+                Register
               </button>
             </Link>
           </div>

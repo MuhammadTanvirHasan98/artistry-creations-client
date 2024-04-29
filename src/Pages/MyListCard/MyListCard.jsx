@@ -3,10 +3,11 @@ import { MdEditSquare, MdOutlinePriceChange } from "react-icons/md";
 import { RiDeleteBin3Fill } from "react-icons/ri";
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
-const MyListCard = ({craft}) => {
+const MyListCard = ({craft, handleDelete}) => {
    
-   const{image, item_name, customization, stock_status, price, rating} = craft;
+   const{_id, image, item_name, customization, stock_status, price, rating} = craft;
 
   return (
     <div className="">
@@ -53,17 +54,33 @@ const MyListCard = ({craft}) => {
          </div>
          {/* Buttons */}
           <div className="flex justify-center gap-3 mt-2" >
-            <Link>
-            <button className="btn btn-outline btn-error text-2xl"><RiDeleteBin3Fill /></button>
-            </Link>
-
-            <Link>
+          
+            <button 
+            data-tooltip-id="my-tooltip1"
+            data-tooltip-content="Delete!"
+            onClick={()=>handleDelete(_id)}
+            className="btn btn-outline btn-error text-2xl"><RiDeleteBin3Fill /></button>
+        
+            <Link 
+            data-tooltip-id="my-tooltip2"
+            data-tooltip-content="Update!"
+            to={`/updateCraft/${_id}`}>
             <button className="btn btn-outline btn-primary text-2xl"><MdEditSquare /></button>
             </Link>
           
           </div>
         </div>
       </div>
+      <Tooltip 
+        id="my-tooltip1" 
+        place="top" 
+        effect="solid"
+        style={{ backgroundColor: "red", color: "white", fontWeight:"700" }}/>
+      <Tooltip 
+        id="my-tooltip2" 
+        place="top" 
+        effect="solid"
+        style={{ backgroundColor: "blue", color: "white", fontWeight:"700" }}/>
     </div>
   );
 };
@@ -72,5 +89,6 @@ export default MyListCard;
 
 
 MyListCard.propTypes = {
-   craft: PropTypes.object
+   craft: PropTypes.object,
+   handleDelete: PropTypes.func
 }

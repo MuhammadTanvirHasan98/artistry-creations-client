@@ -60,18 +60,18 @@ const AddCraft = () => {
         <title>Add Art&Craft | Artistry Creations</title>
       </Helmet>
       <Link to="/">
-        <h1 className="flex items-center gap-2 text-2xl coff font-bold ml-6">
+        <h1 className="flex items-center gap-2 text-2xl coff font-bold ml-6 text-purple-700">
           <IoMdArrowBack />
           Back to Home
         </h1>
       </Link>
       <div className="bg-[#F4F3F0] md:p-10 p-6 my-4 rounded-lg md:w-[80%] w-[92%] mx-auto border-2 border-purple-300 bg-gradient-to-br from-blue-200 via-blue-50 to-purple-200">
         <div className="text-center">
-          <h1 className="md:text-4xl text-3xl coff font-bold text-orange-800">
+          <h1 className="md:text-4xl text-3xl coff font-bold text-purple-800">
             Add New Craft
           </h1>
-          <hr className="md:w-1/3 w-1/2 mx-auto border-orange-700 border-dashed" />
-          <p className="md:w-3/4 mx-auto md:mt-6 mt-2 text-orange-800 font-semibold tracking-wide">
+          <hr className="md:w-1/3 w-1/2 mx-auto border-purple-700 border-dashed" />
+          <p className="md:w-3/4 mx-auto md:mt-6 mt-2 text-blue-700 font-semibold tracking-wide">
             It is a long established fact that a reader will be distraceted by
             the readable content of a page when looking at its layout.
           </p>
@@ -83,7 +83,7 @@ const AddCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Item Name
                   </span>
                 </label>
@@ -91,14 +91,14 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Enter item name"
                   name="itemName"
-                  className="input input-bordered input-warning text-orange-700 "
+                  className="input input-bordered input-info text-blue-600 "
                   required
                 />
               </div>
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Processing Time
                   </span>
                 </label>
@@ -106,8 +106,7 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Enter time in hrs/days"
                   name="time"
-                  className="input input-bordered input-warning text-orange-700 "
-                  defaultValue={"5 hrs"}
+                  className="input input-bordered input-info text-blue-600 "
                   required
                 />
               </div>
@@ -118,33 +117,33 @@ const AddCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Subcategory
                   </span>
                 </label>
                 <select
                   name="subcategory"
-                  className="select select-bordered select-warning text-orange-700"
+                  className="select select-bordered select-info text-blue-600"
                 >
                   <option>Options</option>
-                  <option value="Clay-made pottery">Clay-made pottery</option>
-                  <option value="Stoneware">Stoneware</option>
-                  <option value="Porcelain">Porcelain</option>
-                  <option value="Terra Cotta">Terra Cotta</option>
-                  <option value="Ceramics & Architectural">Ceramics & Architectural</option>
-                  <option value="Home decor pottery">Home decor pottery</option>
+                  <option value="01">Clay-made pottery</option>
+                  <option value="02">Stoneware</option>
+                  <option value="03">Porcelain</option>
+                  <option value="04">Terra Cotta</option>
+                  <option value="05">Ceramics & Architectural</option>
+                  <option value="06">Home decor pottery</option>
                 </select>
               </div>
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Customization Option
                   </span>
                 </label>
                 <select
                   name="customization"
-                  className="select select-bordered select-warning text-orange-700"
+                  className="select select-bordered select-info text-blue-600"
                   defaultValue={"No"}
                 >
                     <option>Options</option>
@@ -158,7 +157,7 @@ const AddCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Price
                   </span>
                 </label>
@@ -166,14 +165,14 @@ const AddCraft = () => {
                   type="number"
                   placeholder="Enter price"
                   name="price"
-                  className="input input-bordered input-warning text-orange-700 "
+                  className="input input-bordered input-info text-blue-600 "
                   required
                 />
               </div>
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Rating
                   </span>
                 </label>
@@ -181,7 +180,7 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Enter rating out of 5"
                   name="rating"
-                  className="input input-bordered input-warning text-orange-700"
+                  className="input input-bordered input-info text-blue-600"
                   required
                 />
               </div>
@@ -191,7 +190,7 @@ const AddCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Photo URL
                   </span>
                 </label>
@@ -199,19 +198,19 @@ const AddCraft = () => {
                   type="text"
                   name="photo"
                   placeholder="Enter photo url"
-                  className="input input-bordered input-warning text-orange-700"
+                  className="input input-bordered input-info text-blue-600"
                 />
               </div>
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     Stock Status
                   </span>
                 </label>
                 <select
                   name="status"
-                  className="select select-bordered select-warning text-orange-700"
+                  className="select select-bordered select-info text-blue-600"
                 >
                   <option>Options</option>
                   <option value="In stock">In Stock</option>
@@ -224,16 +223,16 @@ const AddCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     User Name
                   </span>
                 </label>
 
-                <div className="border-2 border-yellow-400 rounded-lg">
+                <div className="border-2 border-blue-300 rounded-lg">
                   <input
                     type="text"
                     name="userName"
-                    className="input input-bordered input-warning text-orange-700 w-full"
+                    className="input input-bordered input-info text-blue-600 w-full font-semibold"
                     disabled={true}
                     value={user?.displayName}
                   />
@@ -243,16 +242,16 @@ const AddCraft = () => {
               {/* User email */}
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-blue-600 text-lg">
                     User Email
                   </span>
                 </label>
 
-                <div className="border-2 border-yellow-400 rounded-lg">
+                <div className="border-2 border-blue-300 rounded-lg">
                   <input
                     type="text"
                     name="userEmail"
-                    className="input input-bordered input-warning text-orange-700 w-full"
+                    className="input input-bordered input-info text-blue-600 w-full font-semibold"
                     disabled={true}
                     value={user?.email}
                   />
@@ -263,15 +262,14 @@ const AddCraft = () => {
             {/*Short description field */}
             <div className="form-control w-">
               <label className="label">
-                <span className="label-text font-bold text-orange-700 text-lg">
+                <span className="label-text font-bold text-blue-600 text-lg">
                   Short Description
                 </span>
               </label>
               <textarea
                 name="shortDes"
-                className="textarea textarea-warning text-orange-700"
-                placeholder="Give short description within 20 words."
-                defaultValue={"I have do this"}
+                className="textarea textarea-info text-blue-600"
+                placeholder="Give short description within 20-25 words."
               ></textarea>
             </div>
 
@@ -279,7 +277,7 @@ const AddCraft = () => {
             <div className="text-center mt-4">
               <button
                 type="submit"
-                className="btn btn-warning btn-outline font-bold text-xl  px-10"
+                className="btn btn-primary btn-outline font-bold text-xl  px-10"
               >
                 Add Craft
               </button>

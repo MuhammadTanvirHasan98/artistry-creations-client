@@ -1,11 +1,16 @@
 import { Helmet } from "react-helmet";
 import { IoMdArrowBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 // import Swal from "sweetalert2";
 // import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
 
-const AddCraft = () => {
+const UpdateCraft = () => {
   // const { user } = UseAuthContext();
+
+  const loadedCraft = useLoaderData();
+  console.log(loadedCraft);
+   
+   const{item_name, processing_time, subcategory_name, customization,price, rating, image, stock_status, short_description} = loadedCraft;
 
   const handleUpdateCraft = (e) => {
     e.preventDefault();
@@ -27,13 +32,12 @@ const AddCraft = () => {
     };
     console.log(updateCraft);
 
-
   };
 
   return (
     <div className="md:w-[80%] mx-auto my-20">
       <Helmet>
-        <title>Add Card | Artistry Creations</title>
+        <title>Update Craft | Artistry Creations</title>
       </Helmet>
       <Link to="/">
         <h1 className="flex items-center gap-2 text-2xl coff font-bold ml-6">
@@ -68,7 +72,7 @@ const AddCraft = () => {
                   placeholder="Enter item name"
                   name="itemName"
                   className="input input-bordered input-warning text-orange-700 "
-                  defaultValue={"I have do this"}
+                  defaultValue={item_name}
                   required
                 />
               </div>
@@ -84,7 +88,7 @@ const AddCraft = () => {
                   placeholder="Enter time in hrs/days"
                   name="time"
                   className="input input-bordered input-warning text-orange-700 "
-                  defaultValue={"5 hrs"}
+                  defaultValue={processing_time}
                   required
                 />
               </div>
@@ -102,6 +106,7 @@ const AddCraft = () => {
                 <select
                   name="subcategory"
                   className="select select-bordered select-warning text-orange-700"
+                  defaultValue={subcategory_name}
                 >
                   <option>Options</option>
                   <option value="01">Clay-made pottery</option>
@@ -122,7 +127,7 @@ const AddCraft = () => {
                 <select
                   name="customization"
                   className="select select-bordered select-warning text-orange-700"
-                  defaultValue={"No"}
+                  defaultValue={customization}
                 >
                     <option>Options</option>
                   <option value="yes">Yes</option>
@@ -144,7 +149,7 @@ const AddCraft = () => {
                   placeholder="Enter price"
                   name="price"
                   className="input input-bordered input-warning text-orange-700"
-                  defaultValue={"4000"}
+                  defaultValue={price}
                   required
                 />
               </div>
@@ -160,7 +165,7 @@ const AddCraft = () => {
                   placeholder="Enter rating out of 5"
                   name="rating"
                   className="input input-bordered input-warning text-orange-700"
-                  defaultValue={"4.5"}
+                  defaultValue={rating}
                   required
                 />
               </div>
@@ -179,7 +184,7 @@ const AddCraft = () => {
                   name="photo"
                   placeholder="Enter photo url"
                   className="input input-bordered input-warning text-orange-700"
-                  defaultValue={"400"}
+                  defaultValue={image}
                 />
               </div>
 
@@ -192,6 +197,7 @@ const AddCraft = () => {
                 <select
                   name="status"
                   className="select select-bordered select-warning text-orange-700"
+                  defaultValue={stock_status}
                 >
                   <option>Options</option>
                   <option value="In stock">In Stock</option>
@@ -211,7 +217,7 @@ const AddCraft = () => {
                 name="shortDes"
                 className="textarea textarea-warning text-orange-700"
                 placeholder="Give short description within 20 words."
-                defaultValue={"I have do this"}
+                defaultValue={short_description}
               ></textarea>
             </div>
 
@@ -231,4 +237,4 @@ const AddCraft = () => {
   );
 };
 
-export default AddCraft;
+export default UpdateCraft;

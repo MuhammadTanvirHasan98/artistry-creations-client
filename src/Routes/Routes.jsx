@@ -41,6 +41,13 @@ export const router = createBrowserRouter([
         </PrivateRoute>
       },
       {
+        path:'/updateCraft/:id',
+        element:<PrivateRoute>
+          <UpdateCraft/>
+        </PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:4000/allCrafts/${params.id}`)
+      },
+      {
         path:'/myList',
         element: <PrivateRoute>
           <MyList/>

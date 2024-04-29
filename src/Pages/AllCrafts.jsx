@@ -36,8 +36,9 @@ const AllCrafts = () => {
             {/* head */}
             <thead>
               <tr className="text-center">
-                <th className="w-1/3 md:text-xl xl:text-2xl">Art&Craft Item</th>
-                <th className="w-1/4 md:text-xl xl:text-2xl">Subcategory</th>
+                <th className="w-1/6 md:text-xl xl:text-2xl">Image</th>
+                <th className="w-1/4 md:text-xl xl:text-2xl">Item Name</th>
+                <th className="w-1/5 md:text-xl xl:text-2xl">Price</th>
                 <th className="w-1/5 md:text-xl xl:text-2xl">Rating</th>
                 <th className="w-1/5 md:text-xl xl:text-2xl">Explore</th>
               </tr>
@@ -47,33 +48,41 @@ const AllCrafts = () => {
               {/* row 1 */}
               {crafts.map((craft) => (
                 <tr key={craft?._d} className="text-center md:text-lg text-xs">
+
+
+                 {/* Image */}
                   <td className="px-1">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle md:w-16 md:h-16 w-12 h-12">
+                    <div className="avatar">
+                        <div className="mask mask-squircle md:w-[80px] md:h-[80px] w-16 h-16">
                           <img src={craft.image} alt="Art&Craft Image" />
                         </div>
                       </div>
+                   </td>
+               
+                  {/* Item Name */}
+                  <td className="px-1"> 
                       <div>
                         <h1 className="font-bold text-center">
                           {craft?.item_name}
                         </h1>
                       </div>
-                    </div>
                   </td>
 
+                 {/* Price */}
                   <td className="px-1 font-semibold">
-                    <h1>{craft?.subcategory_name}</h1>
+                    <h1>{craft?.price}</h1>
                   </td>
-
+                {/* Rating */}
                   <td className="px-1 font-semibold">4.5</td>
+                 
+                 {/* View Button */}
                   <td className="px-1">
                     <Link
                       data-tooltip-id="my-tooltip"
                       data-tooltip-content="View Details"
                       to={`/craftDetails/${craft?._id}`}
                     >
-                      <button className="btn md:text-lg btn-ghost btn-xs ">
+                      <button className="btn lg:text-3xl md:text-2xl btn-ghost  ">
                         <IoEyeOutline />
                       </button>
                     </Link>
@@ -84,9 +93,10 @@ const AllCrafts = () => {
 
             {/* foot */}
             <tfoot>
-              <tr className="text-center">
-                <th className="w-1/3 md:text-xl xl:text-2xl">Art&Craft Item</th>
-                <th className="w-1/4 md:text-xl xl:text-2xl">Subcategory</th>
+            <tr className="text-center">
+                <th className="w-1/6 md:text-xl xl:text-2xl">Image</th>
+                <th className="w-1/4 md:text-xl xl:text-2xl">Item Name</th>
+                <th className="w-1/5 md:text-xl xl:text-2xl">Price</th>
                 <th className="w-1/5 md:text-xl xl:text-2xl">Rating</th>
                 <th className="w-1/5 md:text-xl xl:text-2xl">Explore</th>
               </tr>

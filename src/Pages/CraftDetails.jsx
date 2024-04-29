@@ -23,13 +23,13 @@ const CraftDetails = () => {
       <h1 className="text-center md:text-5xl text-3xl  font-bold text-purple-800 mb-10">
         Item details
       </h1>
-      <div className="xl:w-[70%] md:w-[80%] mx-auto flex flex-col lg:flex-row  border-2 border-purple-300 rounded-xl shadow-2xl bg-gradient-to-br ">
+      <div className="xl:w-[70%] md:w-[80%] mx-auto flex flex-col lg:flex-row  border-2 border-purple-300 rounded-xl shadow-2xl bg-gradient-to-br">
         {/* craft image  */}
         <div className="lg:w-1/2 w-full">
-          <img
-            src={image}
-            className="w-full lg:h-full md:h-[500px] h-[350px] lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl"
-          />
+            <img
+              src={image}
+              className="w-full lg:h-full md:h-[500px] h-[350px] lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl"
+             />    
         </div>
 
         {/* Craft Info */}
@@ -82,7 +82,7 @@ const CraftDetails = () => {
 
           {/* Review */}
           <p>
-            <span className="font-semibold text-pretty">Review: </span>
+            <span className="font-semibold text-pretty">Short description: </span>
             {short_description}
           </p>
        
