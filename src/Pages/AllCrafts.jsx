@@ -47,7 +47,7 @@ const AllCrafts = () => {
             <tbody>
               {/* row 1 */}
               {crafts.map((craft) => (
-                <tr key={craft?._d} className="text-center md:text-lg text-xs">
+                <tr key={craft?._id} className="text-center md:text-lg text-xs">
 
 
                  {/* Image */}

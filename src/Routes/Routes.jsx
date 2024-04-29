@@ -10,6 +10,7 @@ import MyList from "../Pages/MyList";
 import UpdateCraft from "../Pages/UpdateCraft";
 import CraftDetails from "../Pages/CraftDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import SubcategoryCrafts from "../Components/Home/CategorySection/CategoryCard/SubcategoryCrafts/SubcategoryCrafts";
 
 
 export const router = createBrowserRouter([
@@ -58,6 +59,12 @@ export const router = createBrowserRouter([
         element:<PrivateRoute>
           <UpdateCraft/>
         </PrivateRoute>
+      },
+      {
+        path:'/subcategory/:subcategory',
+        element:<SubcategoryCrafts/>,
+        loader:({params})=>fetch(`http://localhost:4000/allCrafts/subcategory/${params.subcategory}`)
+
       },
       {
         path:'/register',

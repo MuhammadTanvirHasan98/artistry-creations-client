@@ -17,11 +17,11 @@ const CategorySection = () => {
   return (
     <div className="text-center text-pretty">
       <div className="lg:w-[70%] md:w-[80%] w-[95%] mx-auto">
-      <h1 className="md:text-4xl text-3xl font-bold text-purple-800">
+      <h1 className="md:text-4xl text-3xl font-bold text-[#265073]">
         Art & Craft Categories
       </h1>
-      <hr className="xl:w-1/3 md:w-1/2 w-2/3 border-dashed border-purple-800 my-2 mx-auto" />
-      <p className="text-gray-500 ">Dive into our curated selection of art and craft wonders, each waiting to mesmerize you with its unique charm.
+      <hr className="xl:w-1/3 md:w-1/2 w-2/3 border-dashed border-[#265073] my-2 mx-auto" />
+      <p className="text-[#2D9596] ">Dive into our curated selection of art and craft wonders, each waiting to mesmerize you with its unique charm.
       You can see art and craft  items by category here. We have premium collection of Ceramics and Pottery to make you happy.</p>
       </div> 
 

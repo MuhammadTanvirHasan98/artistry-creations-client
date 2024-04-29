@@ -25,7 +25,7 @@ const CraftDetails = () => {
       </h1>
       <div className="xl:w-[70%] md:w-[80%] mx-auto flex flex-col lg:flex-row  border-2 border-purple-300 rounded-xl shadow-2xl bg-gradient-to-br">
         {/* craft image  */}
-        <div className="lg:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full p-4 lg:pb-4 lg:pr-0 pb-0">
             <img
               src={image}
               className="w-full lg:h-full md:h-[500px] h-[350px] lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl"
@@ -38,11 +38,11 @@ const CraftDetails = () => {
             {item_name}
           </h1>
 
-          <h2 className="xl:text-2xl text-lg font-semibold my-4">
+          <h2 className="xl:text-2xl text-lg font-semibold md:my-4 my-2">
             Subcategory: <span className="font-bold">{subcategory_name}</span> 
           </h2>
 
-          <hr className="border-dashed border-purple-600 my-4" />
+          <hr className="border-dashed border-purple-600 md:my-4 my-1" />
 
           <div className="flex justify-between">
             <p className="flex items-center gap-1 font-semibold xl:text-2xl text-lg">
@@ -55,7 +55,7 @@ const CraftDetails = () => {
             </p>
           </div>
 
-          <hr className="border-dashed border-purple-600 my-4" />
+          <hr className="border-dashed border-purple-600 md:my-4 my-1" />
 
           <div className="flex justify-between">
             <p className="font-semibold">
@@ -72,13 +72,13 @@ const CraftDetails = () => {
             </div>
           </div>
 
-          <hr className="border-dashed border-purple-600 my-4" />
+          <hr className="border-dashed border-purple-600 md:my-4 my-1" />
              
           <p className="font-semibold">Processing Time: <span className="font-bold">
            {processing_time}
             </span> </p> 
 
-          <hr className="border-dashed border-purple-600 my-4" />
+          <hr className="border-dashed border-purple-600 md:my-4 my-1" />
 
           {/* Review */}
           <p>

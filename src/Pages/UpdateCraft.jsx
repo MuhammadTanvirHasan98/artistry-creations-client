@@ -1,16 +1,19 @@
 import { Helmet } from "react-helmet";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link, useLoaderData } from "react-router-dom";
-// import Swal from "sweetalert2";
-// import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
+import Swal from "sweetalert2";
+import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
+
 
 const UpdateCraft = () => {
-  // const { user } = UseAuthContext();
+
+  const {user} = UseAuthContext();
+
 
   const loadedCraft = useLoaderData();
   console.log(loadedCraft);
    
-   const{item_name, processing_time, subcategory_name, customization,price, rating, image, stock_status, short_description} = loadedCraft;
+   const{_id,item_name, processing_time, subcategory_name, customization,price, rating, image, stock_status, short_description} = loadedCraft;
 
   const handleUpdateCraft = (e) => {
     e.preventDefault();
@@ -25,12 +28,50 @@ const UpdateCraft = () => {
     const image = form.get("photo");
     const stock_status = form.get("status");
     const short_description = form.get("shortDes");
+    const user_name = user?.displayName;
+    const user_email = user?.email;
 
    
     const updateCraft = {
-      item_name, processing_time, subcategory_name, customization, price, rating, image, stock_status, short_description
+      item_name, processing_time, subcategory_name, customization, price, rating, image, stock_status, short_description, user_name, user_email
     };
     console.log(updateCraft);
+
+
+    fetch(`http://localhost:4000/allCrafts/${_id}`,{
+      method:"PUT",
+      headers:{
+       "content-type":"application/json"
+      },
+      body:JSON.stringify(updateCraft)
+    })
+    .then(res=> res.json())
+    .then(data =>{
+     console.log(data);
+       if(data.modifiedCount > 0){
+         Swal.fire({
+           title: "Updated!",
+           text: "Your craft item has been updated.",
+           icon: "success"
+         });
+         //  e.target.reset();
+          console.log(data);
+       }
+       if(data.modifiedCount == 0){
+         Swal.fire({
+           title: "Not Updated!",
+           text: "You did not update any field of your craft item.",
+           icon: "error"
+         });
+         //  e.target.reset();
+          console.log(data);
+       }
+    })
+
+
+
+
+
 
   };
 

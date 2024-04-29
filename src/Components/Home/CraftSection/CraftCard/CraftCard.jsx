@@ -40,17 +40,17 @@ const CraftCard = ({craft}) => {
       {/* Cards Info */}
       <div className="p-4 pt-1 text-center">
         <div data-aos="flip-up">
-          <h2 className="lg:text-2xl text-xl font-bold play tracking-wide bg-gradient-to-r from-primary via-[#77B0AA] to-purple-500 bg-300% text-transparent bg-clip-text animate-gradient">
+          <h2 className="lg:text-2xl text-xl font-bold play tracking-wide text-[#385398] bg-gradient-to-r from-primary via-blue-500 to-secondary bg-300% text-transparent bg-clip-text animate-gradient">
             {item_name}
           </h2>
-          <p className="text-[#65aba4] hover:text-purple-950 hover:font-semibold">{short_description}</p>
+          <p className="text-[#385398] hover:text-[#2e4785] hover:font-semibold">{short_description}</p>
         </div>
 
           <hr className="border-dashed border-indigo-600 w-[95%] mx-auto my-2" />
 
         <div data-aos="fade-up" className="flex justify-center">
           <Link to={`/craftDetails/${_id}`}>
-            <button className="btn btn-outline text-indigo-600 hover:text-indigo-100 hover:bg-indigo-600 font-bold">
+            <button className="btn btn-outline md:btn-md btn-sm text-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-white  font-bold xl:mt-2 md:mt-0 mt-2 ">
               View Details
             </button>
           </Link>
