@@ -37,7 +37,7 @@ const SlideSection = () => {
         >
           <SwiperSlide>
             <div>
-              <div className="lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/JrHZ8QQ/world-1.png')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
+              <div className="xl:min-h-[900px] lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/JrHZ8QQ/world-1.png')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-10 gap-4 p-2 ">
                   <div className="md:w-2/3 text-center md:text-left text-white md:ml-20">
@@ -67,7 +67,7 @@ const SlideSection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div>
-              <div className="lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/yyBjhnt/world-3.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
+              <div className="xl:min-h-[900px] lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/yyBjhnt/world-3.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-end items-center md:gap-10 gap-4">
                   <div className="md:w-2/3 text-center md:text-right text-white md:ml-20">
@@ -97,7 +97,7 @@ const SlideSection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div>
-              <div className="lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/XbMdL95/world2.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
+              <div className="xl:min-h-[900px] lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/XbMdL95/world2.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-10 gap-4 p-2 ">
                   <div className="md:w-2/3 text-center md:text-left text-white md:ml-20">
@@ -115,7 +115,7 @@ const SlideSection = () => {
                         />
                       </span>
                     </h1>
-                    <p className="md:my-4 my-2 md:text-xl  md:w-[70% animate__animated animate__fadeInBottomLeft animate__slow  md:mx-0 w-[90%] mx-auto text-yellow-600">
+                    <p className="md:my-4 my-2 md:text-xl  md:w-[70%] animate__animated animate__fadeInBottomLeft animate__slow  md:mx-0 w-[90%] mx-auto text-yellow-600">
                     From functional pottery to decorative ceramics, discover the perfect blend of tradition and innovation, elevating your space with exquisite artistry
                     </p>
                   </div>

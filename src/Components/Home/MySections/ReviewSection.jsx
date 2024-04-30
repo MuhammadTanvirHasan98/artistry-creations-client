@@ -1,77 +1,36 @@
-import { Typewriter } from "react-simple-typewriter";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import SlideCard from "./SlideSection";
+import { FaTelegramPlane } from "react-icons/fa";
+import { MdOutlineReviews } from "react-icons/md";
+import { Link } from "react-router-dom";
+("react-intersection-observer");
 
-const Test = () => {
-  
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 764 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 764, min: 0 },
-      items: 1
-    }
-  };
-
+const ReviewSection = () => {
   return (
-    <div>
-       <h1 className='text-center text-2xl'>Test Slider</h1>
-       <h1 className="font-bold text-center">
-        Hi, my name is{' '}
-        <span style={{ color: 'blue', fontWeight: 'bold' }}>
-          {/* Use the Typewriter component here */}
-          <Typewriter
-            words={['Muhammad', 'Tanvir', 'Hasan']}
-            loop={true}
-            cursor
-            cursorStyle='|'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </span>
-      </h1>
-      <div className="mt-10 border-2 p-10 border-blue-400 relative">
-      <Carousel 
-      responsive={responsive}
-      infinite={true} // Enable looping
-      swipeable={true}
-      draggable={true}
-      centerMode={true}
-      ssr={true} // Server-side rendering
-      autoPlay={false}
-      keyBoardControl={true}
-      customTransition="all .5s"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px mx-2"
-      renderButtonGroupOutside={true}
-    >
-       <SlideCard/>
-       <SlideCard/>
-       <SlideCard/>
-       <SlideCard/>
-       <SlideCard/>
-       <SlideCard/>
-       <SlideCard/>
-       <SlideCard/>
-      {/* Add as many items as you want */}
-    </Carousel>
+    <div data-aos="zoom-out">
+      <div className="min-h-[200px] md:min-h-[300px] lg:min-h-[450px] bg-[url('https://i.ibb.co/1Gppfhm/review.jpg')] bg-no-repeat bg-cover object-fill bg-center flex justify-center items-center md:mt-10 mt-4 py-8 md:py-0">
+        <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-6 gap-4 p-2 ">
+          {/* Left Section */}
+          <div className="md:w-[60%] text-center md:text-left  ">
+          {/* data-aos="fade-down-right"  */}
+            <h1 className="md:text-5xl text-3xl font-bold text-[#fff]">
+            We would love to hear your thoughts.
+            </h1>
+            <p data-aos="fade-up" className="md:my-4 my-2 md:text-xl text-green-500 font-semibold">
+            If you have had a positive experience with us, please take a moment to share your thoughts and leave us a review.
+            </p>
+          </div>
 
-
-
+          {/* Right Section */}
+          <div data-aos="zoom-in-left" className="md:w-[35%] lg:w-[28%] w-[70%] border-2  border-green-500 hover:border-orange-600  hover:text-black py-2 flex flex-col items-center justify-center text-white">
+            <Link to="/review">
+              <button className="btn btn-sm md:btn-md lg:btn-lg bg-green-600 text-white font-bold rounded-none md:px-10 px-6  border-none hover:bg-orange-600 hover:text-black">
+                Give a Review <MdOutlineReviews className="mt-1 md:text-2xl" />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
-      
     </div>
   );
 };
 
-export default Test;
+export default ReviewSection;

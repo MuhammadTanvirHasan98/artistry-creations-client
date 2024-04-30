@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import CategorySection from "./CategorySection/CategorySection";
 import CraftSection from "./CraftSection/CraftSection";
 import SlideSection from "./MySections/SlideSection";
+import ReviewSection from "./MySections/ReviewSection";
 
 const Home = () => {
   return (
@@ -13,11 +14,14 @@ const Home = () => {
          </title>
       </Helmet>
        {/* <Banner/> */}
-       <div className="md:w-[70%] w-[80%] mx-auto space-y-40 mb-36">
+       <div className="md:w-[70%] w-[80%] mx-auto md:space-y-80 space-y-72 md:mb-80 mb-72 ">
          <CraftSection/>
          <CategorySection/>
        </div>
        <SlideSection/>
+       <div className="md:w-[70%] w-[80%] mx-auto md:my-80 my-72 ">
+        <ReviewSection/>
+       </div>
     </div>
   );
 };

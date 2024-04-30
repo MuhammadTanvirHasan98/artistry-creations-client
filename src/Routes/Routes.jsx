@@ -11,6 +11,7 @@ import UpdateCraft from "../Pages/UpdateCraft";
 import CraftDetails from "../Pages/CraftDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import SubcategoryCrafts from "../Components/Home/CategorySection/CategoryCard/SubcategoryCrafts/SubcategoryCrafts";
+import Review from "../Pages/Review";
 
 
 export const router = createBrowserRouter([
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
         element:<SubcategoryCrafts/>,
         loader:({params})=>fetch(`http://localhost:4000/allCrafts/subcategory/${params.subcategory}`)
 
+      },
+      {
+        path:'/review',
+        element:<Review/>,
       },
       {
         path:'/register',
