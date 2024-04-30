@@ -50,7 +50,7 @@ const Register = () => {
   };
 
   return (
-    <div data-aos='fade-out'  className={`${user ? "hidden" : "block"} mt-10`}>
+    <div data-aos='fade-out'  className={`${user ? "hidden" : "block"} my-20`}>
 
       <Helmet>
          <title>Register | Artistry Creations</title>

@@ -26,7 +26,7 @@ const SubcategoryCard = ({ craft }) => {
 
   return (
     <div>
-      <div className=" hover:bg-slate-100  rounded-lg shadow-xl">
+      <div data-aos='fade-out' className=" hover:bg-slate-100  rounded-lg shadow-xl">
         {/* Card Image */}
         <figure className="xl:px-8 xl:pt-8 px-5 pt-5">
           <img

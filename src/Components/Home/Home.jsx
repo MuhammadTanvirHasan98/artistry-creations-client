@@ -1,4 +1,4 @@
-// import Banner from "./Banner/Banner";
+import Banner from "./Banner/Banner";
 import { Helmet } from "react-helmet";
 import CategorySection from "./CategorySection/CategorySection";
 import CraftSection from "./CraftSection/CraftSection";
@@ -13,8 +13,8 @@ const Home = () => {
             Home | Artistry Creations
          </title>
       </Helmet>
-       {/* <Banner/> */}
-       <div className="md:w-[70%] w-[80%] mx-auto md:space-y-80 space-y-72 md:mb-80 mb-72 ">
+       <Banner/>
+       <div className="md:w-[70%] w-[80%] mx-auto md:space-y-80 space-y-72 md:my-80  my-36">
          <CraftSection/>
          <CategorySection/>
        </div>

@@ -13,6 +13,7 @@ const SlideSection = () => {
           <h1 className="text-4xl text-[#46c594] font-bold">
             World Best Ceramics & Pottery
           </h1>
+           <hr className="my-2 md:w-1/2 w-2/3 mx-auto" />
           <p className="lg:w-1/2 mx-auto mt-2">
             Explore unparalleled craftsmanship and timeless beauty in our
             world-renowned ceramics and pottery collection. Elevate your space

@@ -31,7 +31,7 @@ const AddCraft = () => {
     console.log(newCraft);
 
 
-     fetch("http://localhost:4000/allCrafts",{
+     fetch("https://artistry-creations-server.vercel.app/allCrafts",{
        method:"POST",
        headers:{
         "content-type":"application/json"

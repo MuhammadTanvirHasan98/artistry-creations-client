@@ -53,7 +53,7 @@ const UpdateCraft = () => {
     };
     console.log(updateCraft);
 
-    fetch(`http://localhost:4000/allCrafts/${_id}`, {
+    fetch(`https://artistry-creations-server.vercel.app/allCrafts/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

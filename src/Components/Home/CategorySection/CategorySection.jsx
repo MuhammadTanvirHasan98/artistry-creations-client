@@ -5,7 +5,7 @@ const CategorySection = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/subcategories")
+    fetch("https://artistry-creations-server.vercel.app/subcategories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);

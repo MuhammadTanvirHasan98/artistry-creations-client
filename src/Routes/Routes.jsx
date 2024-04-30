@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         <PrivateRoute>
           <CraftDetails/>
         </PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:4000/allCrafts/${params.id}`)
+        loader:({params})=>fetch(`https://artistry-creations-server.vercel.app/allCrafts/${params.id}`)
       },
       {
         path:'/allArtAndCraft',
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
         element:<PrivateRoute>
           <UpdateCraft/>
         </PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:4000/allCrafts/${params.id}`)
+        loader:({params})=>fetch(`https://artistry-creations-server.vercel.app/allCrafts/${params.id}`)
       },
       {
         path:'/myList',
@@ -64,7 +64,7 @@ export const router = createBrowserRouter([
       {
         path:'/subcategory/:subcategory',
         element:<SubcategoryCrafts/>,
-        loader:({params})=>fetch(`http://localhost:4000/allCrafts/subcategory/${params.subcategory}`)
+        loader:({params})=>fetch(`https://artistry-creations-server.vercel.app/allCrafts/subcategory/${params.subcategory}`)
 
       },
       {

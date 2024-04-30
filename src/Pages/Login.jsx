@@ -52,7 +52,7 @@ const Login = () => {
 
 
   return (
-    <div data-aos="flip-down" className={`${user ? "hidden":"block"} mt-10`}>
+    <div data-aos="flip-down" className={`${user ? "hidden":"block"} my-20`}>
       <Helmet>
          <title>Login | Artistry Creations</title>
       </Helmet>

@@ -9,7 +9,7 @@ const AllCrafts = () => {
   const [crafts, setCrafts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/allCrafts")
+    fetch("https://artistry-creations-server.vercel.app/allCrafts")
       .then((res) => res.json())
       .then((data) => {
         setCrafts(data);

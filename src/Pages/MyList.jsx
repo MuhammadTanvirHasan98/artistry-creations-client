@@ -10,7 +10,7 @@ const MyList = () => {
   const [crafts, setCrafts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/allCrafts/email/${user?.email}`)
+    fetch(`https://artistry-creations-server.vercel.app/allCrafts/email/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCrafts(data);
@@ -32,7 +32,7 @@ const MyList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
          
-        fetch(`http://localhost:4000/allCrafts/${_id}`,{
+        fetch(`https://artistry-creations-server.vercel.app/allCrafts/${_id}`,{
           method:"DELETE"
         }).then(res=> res.json())
         .then(data=>{

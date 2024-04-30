@@ -26,21 +26,21 @@ const Banner = () => {
           loop={true}
           className="mySwiper"
         >
+  
           <SwiperSlide>
             <div>
               <div className="lg:min-h-[800px] md:min-h-[600px] min-h-[350px] bg-[url('https://i.ibb.co/8MQ2BfT/pottery-handmade.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center py-8 md:py-0">
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-10 gap-4 p-2 ">
                   <div className="md:w-2/3 text-center md:text-left text-white md:ml-20">
-                    <h3 className="md:text-2xl text-xl font-semibold animate__animated animate__fadeInTopLeft  animate__slow">
+                    <h3 className="md:text-2xl text-xl font-semibold text-sky-400 animate__animated animate__fadeInTopLeft  animate__slow">
                       Wonderful Artistry
                     </h3>
-                    <h1 className="md:text-7xl text-4xl  font-bold animate__animated  animate__fadeInUp animate__slow text-[#f3dead]">
+                    <h1 className="md:text-7xl text-4xl  font-bold animate__animated  animate__fadeInUp animate__slower text-[#f3dead]">
                     Take Hold Of <br /> Peaceful Beauty
                     </h1>
-                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow md:w-[70%] md:mx-0 w-[90%] mx-auto">
-                      Whether you are looking to buy or rent a home, we really
-                      are the people for you to come to Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic ea ipsa nihil tenetur impedit pariatur fugit quae alias ipsam earum?
+                    <p  className="md:my-4 my-2 md:text-xl  md:w-[70%] animate__animated animate__fadeInBottomRight md:mx-0 w-[90%] mx-auto">
+                    We believe in the beauty of handcrafted ceramics and pottery. Each piece tells a story, carrying the marks of the artist’s hands and the essence of their creativity.
                     </p>
                     <button className="btn btn-sm md:btn-md btn-outline btn-info text-white font-bold rounded-none animate__animated animate__backInUp  hover:bg-blue-600 hover:text-black">
                       Explore More
@@ -56,15 +56,14 @@ const Banner = () => {
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-10 gap-4 p-2 ">
                   <div className="md:w-2/3 text-center md:text-left text-white md:ml-20">
-                    <h3 className="md:text-2xl text-xl font-semibold animate__animated animate__fadeInTopLeft  animate__slow">
+                    <h3 className="md:text-2xl text-xl font-semibold text-sky-400 animate__animated animate__fadeInTopLeft  animate__slow">
                       Wonderful Artistry
                     </h3>
-                    <h1 className="md:text-7xl text-4xl  font-bold animate__animated  animate__fadeInUp animate__slow text-[#f3dead]">
+                    <h1 className="md:text-7xl text-4xl  font-bold animate__animated  animate__fadeInUp animate__slower text-[#f3dead]">
                     Take Hold Of <br /> Peaceful Beauty
                     </h1>
-                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow md:w-[70%] md:mx-0 w-[90%] mx-auto">
-                      Whether you are looking to buy or rent a home, we really
-                      are the people for you to come to Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic ea ipsa nihil tenetur impedit pariatur fugit quae alias ipsam earum?
+                    <p  className="md:my-4 my-2 md:text-xl  md:w-[70%] animate__animated animate__fadeInBottomRight md:mx-0 w-[90%] mx-auto">
+                    We believe in the beauty of handcrafted ceramics and pottery. Each piece tells a story, carrying the marks of the artist’s hands and the essence of their creativity.
                     </p>
                     <button className="btn btn-sm md:btn-md btn-outline btn-info text-white font-bold rounded-none animate__animated animate__backInUp  hover:bg-blue-600 hover:text-black">
                       Explore More
@@ -80,15 +79,14 @@ const Banner = () => {
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-10 gap-4 p-2 ">
                   <div className="md:w-2/3 text-center md:text-left text-white md:ml-20">
-                    <h3 className="md:text-2xl text-xl font-semibold animate__animated animate__fadeInTopLeft  animate__slow">
+                    <h3 className="md:text-2xl text-xl font-semibold text-sky-400 animate__animated animate__fadeInTopLeft  animate__slow">
                       Wonderful Artistry
                     </h3>
-                    <h1 className="md:text-7xl text-4xl  font-bold animate__animated  animate__fadeInUp animate__slow text-[#f3dead]">
+                    <h1 className="md:text-7xl text-4xl  font-bold animate__animated  animate__fadeInUp animate__slower text-[#f3dead]">
                     Take Hold Of <br /> Peaceful Beauty
                     </h1>
-                    <p  className="md:my-4 my-2 md:text-xl  md:w-[70% animate__animated animate__fadeInBottomRight md:mx-0 w-[90%] mx-auto">
-                      Whether you are looking to buy or rent a home, we really
-                      are the people for you to come to Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic ea ipsa nihil tenetur impedit pariatur fugit quae alias ipsam earum?
+                    <p  className="md:my-4 my-2 md:text-xl  md:w-[70%] animate__animated animate__fadeInBottomRight md:mx-0 w-[90%] mx-auto">
+                    We believe in the beauty of handcrafted ceramics and pottery. Each piece tells a story, carrying the marks of the artist’s hands and the essence of their creativity.
                     </p>
                     <button className="btn btn-sm md:btn-md btn-outline btn-info text-white font-bold rounded-none animate__animated animate__backInUp  hover:bg-blue-600 hover:text-black">
                       Explore More
