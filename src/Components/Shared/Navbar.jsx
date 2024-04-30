@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { UseAuthContext } from "../../Firebase/FirebaseAuth/FirebaseProvider";
-import logo from "../../assets/logo1.png";
+import logo from "../../assets/logo.png";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
