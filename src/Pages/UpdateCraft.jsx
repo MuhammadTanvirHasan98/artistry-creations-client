@@ -1,19 +1,26 @@
 import { Helmet } from "react-helmet";
-import { IoMdArrowBack } from "react-icons/io";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
 
-
 const UpdateCraft = () => {
-
-  const {user} = UseAuthContext();
-
+  const { user } = UseAuthContext();
 
   const loadedCraft = useLoaderData();
   console.log(loadedCraft);
-   
-   const{_id,item_name, processing_time, subcategory_name, customization,price, rating, image, stock_status, short_description} = loadedCraft;
+
+  const {
+    _id,
+    item_name,
+    processing_time,
+    subcategory_name,
+    customization,
+    price,
+    rating,
+    image,
+    stock_status,
+    short_description,
+  } = loadedCraft;
 
   const handleUpdateCraft = (e) => {
     e.preventDefault();
@@ -31,48 +38,50 @@ const UpdateCraft = () => {
     const user_name = user?.displayName;
     const user_email = user?.email;
 
-   
     const updateCraft = {
-      item_name, processing_time, subcategory_name, customization, price, rating, image, stock_status, short_description, user_name, user_email
+      item_name,
+      processing_time,
+      subcategory_name,
+      customization,
+      price,
+      rating,
+      image,
+      stock_status,
+      short_description,
+      user_name,
+      user_email,
     };
     console.log(updateCraft);
 
-
-    fetch(`http://localhost:4000/allCrafts/${_id}`,{
-      method:"PUT",
-      headers:{
-       "content-type":"application/json"
+    fetch(`http://localhost:4000/allCrafts/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(updateCraft)
+      body: JSON.stringify(updateCraft),
     })
-    .then(res=> res.json())
-    .then(data =>{
-     console.log(data);
-       if(data.modifiedCount > 0){
-         Swal.fire({
-           title: "Updated!",
-           text: "Your craft item has been updated.",
-           icon: "success"
-         });
-         //  e.target.reset();
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Updated!",
+            text: "Your craft item has been updated.",
+            icon: "success",
+          });
+          //  e.target.reset();
           console.log(data);
-       }
-       if(data.modifiedCount == 0){
-         Swal.fire({
-           title: "Not Updated!",
-           text: "You did not update any field of your craft item.",
-           icon: "error"
-         });
-         //  e.target.reset();
+        }
+        if (data.modifiedCount == 0) {
+          Swal.fire({
+            title: "Not Updated!",
+            text: "You did not update any field of your craft item.",
+            icon: "error",
+          });
+          //  e.target.reset();
           console.log(data);
-       }
-    })
-
-
-
-
-
-
+        }
+      });
   };
 
   return (
@@ -80,21 +89,16 @@ const UpdateCraft = () => {
       <Helmet>
         <title>Update Craft | Artistry Creations</title>
       </Helmet>
-      <Link to="/">
-        <h1 className="flex items-center gap-2 text-2xl coff font-bold ml-6">
-          <IoMdArrowBack />
-          Back to Home
-        </h1>
-      </Link>
-      <div className="bg-[#F4F3F0] md:p-10 p-6 my-4 rounded-lg md:w-[80%] w-[92%] mx-auto">
+
+      <div className="bg-[#F4F3F0] md:p-10 p-6 my-4 rounded-lg md:w-[80%] w-[92%] mx-auto border-2 border-sky-300 bg-gradient-to-br from-purple-200 via-blue-50 to-blue-200">
         <div className="text-center">
-          <h1 className="md:text-4xl text-3xl coff font-bold text-orange-800">
+          <h1 className="md:text-4xl text-3xl coff font-bold text-blue-600">
             Update Your Craft
           </h1>
-          <hr className="md:w-1/2 w-2/3 mx-auto mt-2 border-orange-700 border-dashed" />
-          <p className="md:w-3/4 mx-auto md:mt-6 mt-2 text-orange-800 font-semibold tracking-wide">
-            It is a long established fact that a reader will be distraceted by
-            the readable content of a page when looking at its layout.
+          <hr className="md:w-1/2 w-2/3 mx-auto mt-2 border-blue-700 border-dashed" />
+          <p className="md:w-3/4 mx-auto mt-2 text-blue-700 font-semibold tracking-wide">
+            You can update any information you want. After submitting your
+            update form, your craft item will be updated.
           </p>
         </div>
 
@@ -104,7 +108,7 @@ const UpdateCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700   text-lg">
                     Item Name
                   </span>
                 </label>
@@ -112,7 +116,7 @@ const UpdateCraft = () => {
                   type="text"
                   placeholder="Enter item name"
                   name="itemName"
-                  className="input input-bordered input-warning text-orange-700 "
+                  className="input input-bordered input-primary text-indigo-700   "
                   defaultValue={item_name}
                   required
                 />
@@ -120,7 +124,7 @@ const UpdateCraft = () => {
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700   text-lg">
                     Processing Time
                   </span>
                 </label>
@@ -128,7 +132,7 @@ const UpdateCraft = () => {
                   type="text"
                   placeholder="Enter time in hrs/days"
                   name="time"
-                  className="input input-bordered input-warning text-orange-700 "
+                  className="input input-bordered input-primary text-indigo-700   "
                   defaultValue={processing_time}
                   required
                 />
@@ -140,13 +144,13 @@ const UpdateCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700   text-lg">
                     Subcategory
                   </span>
                 </label>
                 <select
                   name="subcategory"
-                  className="select select-bordered select-warning text-orange-700"
+                  className="select select-bordered select-primary text-indigo-700  "
                   defaultValue={subcategory_name}
                 >
                   <option>Options</option>
@@ -161,18 +165,18 @@ const UpdateCraft = () => {
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700   text-lg">
                     Customization Option
                   </span>
                 </label>
                 <select
                   name="customization"
-                  className="select select-bordered select-warning text-orange-700"
+                  className="select select-bordered select-primary text-indigo-700  "
                   defaultValue={customization}
                 >
-                    <option>Options</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
+                  <option>Options</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
               </div>
             </div>
@@ -181,7 +185,7 @@ const UpdateCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700   text-lg">
                     Price
                   </span>
                 </label>
@@ -189,7 +193,7 @@ const UpdateCraft = () => {
                   type="number"
                   placeholder="Enter price"
                   name="price"
-                  className="input input-bordered input-warning text-orange-700"
+                  className="input input-bordered input-primary text-indigo-700  "
                   defaultValue={price}
                   required
                 />
@@ -197,7 +201,7 @@ const UpdateCraft = () => {
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700 text-lg">
                     Rating
                   </span>
                 </label>
@@ -205,7 +209,7 @@ const UpdateCraft = () => {
                   type="number"
                   placeholder="Enter rating out of 5"
                   name="rating"
-                  className="input input-bordered input-warning text-orange-700"
+                  className="input input-bordered input-primary text-indigo-700"
                   defaultValue={rating}
                   required
                 />
@@ -216,7 +220,7 @@ const UpdateCraft = () => {
             <div className="flex flex-col md:flex-row justify-between md:gap-4">
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700 text-lg">
                     Photo URL
                   </span>
                 </label>
@@ -224,20 +228,20 @@ const UpdateCraft = () => {
                   type="text"
                   name="photo"
                   placeholder="Enter photo url"
-                  className="input input-bordered input-warning text-orange-700"
+                  className="input input-bordered input-primary text-indigo-700"
                   defaultValue={image}
                 />
               </div>
 
               <div className="form-control md:w-1/2 w-full">
                 <label className="label">
-                  <span className="label-text font-bold text-orange-700 text-lg">
+                  <span className="label-text font-bold text-indigo-700   text-lg">
                     Stock Status
                   </span>
                 </label>
                 <select
                   name="status"
-                  className="select select-bordered select-warning text-orange-700"
+                  className="select select-bordered select-primary text-indigo-700  "
                   defaultValue={stock_status}
                 >
                   <option>Options</option>
@@ -246,17 +250,17 @@ const UpdateCraft = () => {
                 </select>
               </div>
             </div>
-    
+
             {/*Short description field */}
             <div className="form-control w-">
               <label className="label">
-                <span className="label-text font-bold text-orange-700 text-lg">
+                <span className="label-text font-bold text-indigo-700   text-lg">
                   Short Description
                 </span>
               </label>
               <textarea
                 name="shortDes"
-                className="textarea textarea-warning text-orange-700"
+                className="textarea textarea-primary text-indigo-700  "
                 placeholder="Give short description within 20 words."
                 defaultValue={short_description}
               ></textarea>
@@ -266,7 +270,7 @@ const UpdateCraft = () => {
             <div className="text-center mt-4">
               <button
                 type="submit"
-                className="btn btn-warning btn-outline font-bold text-xl  px-10"
+                className="btn btn-primary btn-outline font-bold text-xl px-10"
               >
                 Update Craft
               </button>

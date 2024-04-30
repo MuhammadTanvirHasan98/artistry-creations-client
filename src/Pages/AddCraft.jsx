@@ -1,6 +1,4 @@
 import { Helmet } from "react-helmet";
-import { IoMdArrowBack } from "react-icons/io";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { UseAuthContext } from "../Firebase/FirebaseAuth/FirebaseProvider";
 
@@ -59,12 +57,7 @@ const AddCraft = () => {
       <Helmet>
         <title>Add Art&Craft | Artistry Creations</title>
       </Helmet>
-      <Link to="/">
-        <h1 className="flex items-center gap-2 text-2xl coff font-bold ml-6 text-purple-700">
-          <IoMdArrowBack />
-          Back to Home
-        </h1>
-      </Link>
+
       <div className="bg-[#F4F3F0] md:p-10 p-6 my-4 rounded-lg md:w-[80%] w-[92%] mx-auto border-2 border-purple-300 bg-gradient-to-br from-blue-200 via-blue-50 to-purple-200">
         <div className="text-center">
           <h1 className="md:text-4xl text-3xl coff font-bold text-purple-800">
@@ -72,8 +65,7 @@ const AddCraft = () => {
           </h1>
           <hr className="md:w-1/3 w-1/2 mx-auto border-purple-700 border-dashed" />
           <p className="md:w-3/4 mx-auto md:mt-6 mt-2 text-blue-700 font-semibold tracking-wide">
-            It is a long established fact that a reader will be distraceted by
-            the readable content of a page when looking at its layout.
+          You can add craft item you like most so that people may know about new creations of Ceramics and Pottery collections.After submitting this form, your craft item will be added to our <span className="font-bold"> All Arts&Craft </span>Section.
           </p>
         </div>
 
@@ -144,11 +136,10 @@ const AddCraft = () => {
                 <select
                   name="customization"
                   className="select select-bordered select-info text-blue-600"
-                  defaultValue={"No"}
                 >
                     <option>Options</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
               </div>
             </div>

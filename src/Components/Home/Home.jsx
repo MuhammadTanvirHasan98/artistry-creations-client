@@ -2,6 +2,7 @@
 import { Helmet } from "react-helmet";
 import CategorySection from "./CategorySection/CategorySection";
 import CraftSection from "./CraftSection/CraftSection";
+import SlideSection from "./MySections/SlideSection";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
          <CraftSection/>
          <CategorySection/>
        </div>
+       <SlideSection/>
     </div>
   );
 };

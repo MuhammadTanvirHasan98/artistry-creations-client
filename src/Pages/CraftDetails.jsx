@@ -1,10 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { IoStarOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { subcategoryName } from "../JS/Function";
 
 const CraftDetails = () => {
   const craft = useLoaderData();
   console.log(craft);
+
+  const [subcategory, setSubcategory] = useState("");
 
   const {
     image,
@@ -17,6 +21,14 @@ const CraftDetails = () => {
     stock_status,
     short_description,
   } = craft;
+
+
+   
+  useEffect(() => {
+    setSubcategory(subcategoryName(subcategory_name))
+ }, [subcategory_name]);
+
+
 
   return (
     <div className="w-[90%] mx-auto my-16">
@@ -39,7 +51,7 @@ const CraftDetails = () => {
           </h1>
 
           <h2 className="xl:text-2xl text-lg font-semibold md:my-4 my-2">
-            Subcategory: <span className="font-bold">{subcategory_name}</span> 
+            Subcategory: <span className="font-bold">{subcategory}</span> 
           </h2>
 
           <hr className="border-dashed border-purple-600 md:my-4 my-1" />
