@@ -19,7 +19,7 @@ const Home = () => {
          <CategorySection/>
        </div>
        <SlideSection/>
-       <div className="md:w-[70%] w-[80%] mx-auto md:my-80 my-72 ">
+       <div className="md:w-[70%] w-[80%] mx-auto md:my-72 my-44 ">
         <ReviewSection/>
        </div>
     </div>

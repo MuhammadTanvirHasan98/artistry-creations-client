@@ -19,14 +19,14 @@ const AllCrafts = () => {
   console.log(crafts);
 
   return (
-    <div className="md:w-[70%] w-[95%] mx-auto my-20">
+    <div className="md:w-[70%] w-[95%] mx-auto my-20 mb-36">
         <Helmet>
          <title>
             All Art&Craft | Artistry Creations
           </title>
         </Helmet>
 
-      <h1 className="lg:text-5xl md:text-4xl text-3xl text-purple-800 text-center mb-10">
+      <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold text-purple-800 text-center mb-10">
         All Art & Craft are here
       </h1>
 
@@ -70,10 +70,10 @@ const AllCrafts = () => {
 
                  {/* Price */}
                   <td className="px-1 font-semibold">
-                    <h1>{craft?.price}</h1>
+                    <h1>{craft?.price}$</h1>
                   </td>
                 {/* Rating */}
-                  <td className="px-1 font-semibold">4.5</td>
+                  <td className="px-1 font-semibold">{craft?.rating}</td>
                  
                  {/* View Button */}
                   <td className="px-1">

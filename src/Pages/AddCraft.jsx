@@ -46,7 +46,7 @@ const AddCraft = () => {
             text: "Your craft item has been added.",
             icon: "success"
           });
-          //  e.target.reset();
+          //  e.target.reset(); // it does not work
            console.log(data);
         }
      })

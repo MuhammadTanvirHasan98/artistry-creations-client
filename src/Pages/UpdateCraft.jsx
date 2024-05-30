@@ -69,7 +69,6 @@ const UpdateCraft = () => {
             text: "Your craft item has been updated.",
             icon: "success",
           });
-          //  e.target.reset();
           console.log(data);
         }
         if (data.modifiedCount == 0) {
@@ -206,7 +205,7 @@ const UpdateCraft = () => {
                   </span>
                 </label>
                 <input
-                  type="number"
+                  type="text"
                   placeholder="Enter rating out of 5"
                   name="rating"
                   className="input input-bordered input-primary text-indigo-700"

@@ -9,7 +9,7 @@ const Review = () => {
   };
 
   return (
-    <div className="text-center text-3xl">
+    <div className="text-center text-3xl mb-36">
       <Helmet>
          <title>Review Us | Artistry Creations</title>
       </Helmet>

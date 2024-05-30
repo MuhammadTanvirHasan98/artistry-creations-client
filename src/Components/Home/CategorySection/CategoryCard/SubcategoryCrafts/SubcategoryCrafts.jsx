@@ -23,7 +23,7 @@ const SubcategoryCrafts = () => {
 
 
  return (
-  <div className="md:w-[70%] w-[80%] mx-auto my-16 text-center">
+  <div className="md:w-[70%] w-[80%] mx-auto my-20 mb-36 text-center">
         
   <Helmet>
    <title>

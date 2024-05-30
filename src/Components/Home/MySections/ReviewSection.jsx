@@ -9,7 +9,7 @@ const ReviewSection = () => {
          <h1 className="text-center font-bold md:text-4xl text-3xl text-green-500">Review US</h1>
          <hr className="w-1/2 md:w-1/3 mx-auto my-2"/>
       </div>
-      <div className="min-h-[200px] md:min-h-[300px] lg:min-h-[450px] bg-[url('https://i.ibb.co/1Gppfhm/review.jpg')] bg-no-repeat bg-cover object-fill bg-center flex justify-center items-center md:mt-10 mt-4 py-8 md:py-0">
+      <div className="min-h-[350px] md:min-h-[450px] lg:min-h-[650px] bg-[url('https://i.ibb.co/1Gppfhm/review.jpg')] bg-no-repeat bg-cover object-fill bg-center flex justify-center items-center md:mt-10 mt-4 py-8 md:py-0">
         <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-6 gap-4 p-2 ">
           {/* Left Section */}
           <div className="md:w-[60%] text-center md:text-left  ">

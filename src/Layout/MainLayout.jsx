@@ -8,7 +8,9 @@ const MainLayout = () => {
   return (
     <div>
       <Navbar/>
+      <div className="max-w-[2000px] mx-auto">
        <Outlet/>
+      </div>
       <Footer/>
       <ToastContainer/>
     </div>
