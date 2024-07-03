@@ -1,16 +1,64 @@
 # Artistry Creations
-[@Click here to visit my live website](https://artistry-creations.web.app/)
 
-Artistry Creations invites you to explore a world of creativity and craftsmanship through our premier arts and crafts store specializing in Ceramics and Pottery. Immerse yourself in the beauty of handmade ceramics and pottery pieces, carefully curated to inspire your artistic endeavors.
+[**Artistry Creations**](https://artistry-creations.web.app/) invites you to explore a world of creativity and craftsmanship through our premier arts and crafts store specializing in Ceramics and Pottery. Immerse yourself in the beauty of handmade ceramics and pottery pieces, carefully curated to inspire your artistic endeavors.
 
-Features:
-User Registration and Login: Join our community of artists and enthusiasts by creating an account and unlocking exclusive features. Logged-in users gain access to special privileges such as viewing detailed information about each ceramics or pottery piece, adding items to their personal collection, and managing their saved items.
-Ceramics and Pottery Listings: Browse through our diverse selection of ceramics and pottery items, each crafted with passion and skill. From exquisite vases to functional tableware, our collection showcases the finest in artisanal craftsmanship.
-MyList Management: Organize your favorite ceramics and pottery pieces in your personal MyList. Easily add, update, or delete items from your list, ensuring that your artistic vision is always within reach.
-Community Sharing: Discover inspiration from fellow enthusiasts by exploring our All Arts & Crafts section, where all user-added items are showcased. Share your creations, discover new talents, and connect with like-minded individuals passionate about the arts.
-Contact Form: Have questions or need assistance? Reach out to our dedicated team through our integrated contact form. We're here to help you unleash your creativity and find the perfect pieces for your projects.
-Responsive Design: Experience seamless browsing across all devices, from desktops to smartphones, with our responsive design. Enjoy a consistent and intuitive interface tailored to your device's screen size and resolution.
+## Key Features:
 
-#  Utilized npm packages:
-*  React-simple-typewriter
-* React-tooltipAnimate.css: 
+- **User Registration and Login:** User can create an account for exclusive access to detailed product information and personalized features.
+- **User Management:** Users can add, view, update, and delete craft items, enhancing their browsing experience.
+- **Comprehensive Collection:** All user-added Art & Craft items are showcased on the "All Art & Craft" page, providing a comprehensive view of the collection.
+- **Category and Customization Filter:** Users can explore art & craft items by category and implement customization-based filtering, with a dedicated “My Art & Craft List” section.
+- **Contact Form:** User can reach out for assistance or inquiries through our integrated contact form.
+
+Start your creative journey with Artistry Creations today!
+
+## Utilized npm packages:
+
+- [React-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
+- [React-tooltip](https://www.npmjs.com/package/react-tooltip)
+- [Animate.css](https://animate.style/)
+- [AOS](https://michalsnik.github.io/aos/)
+- [React Helmet](https://github.com/nfl/react-helmet)
+- [React Loader Spinner](https://mhnpd.github.io/react-loader-spinner/)
+- [React Toastify](https://fkhadra.github.io/react-toastify/)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [Swiper](https://swiperjs.com/)
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+
+
+## All Credits:
+This website is developed by **Muhammad Tanvir Hasan**
+
+## Getting Started
+
+### Prerequisites
+Make sure you have the following installed on your system:
+- Node.js (v14.x or higher)
+- npm (v6.x or higher) or yarn (v1.x or higher)
+
+### Installation
+1.Clone the repository:
+```bash
+git clone https://github.com/MuhammadTanvirHasan98/artistry-creations-client.git
+cd artistry-creations-client
+```
+2.Installation:
+```bash
+npm install
+```
+3.Set up Firebase
+- Create a Firebase project: Visit [Firebase Console](https://console.firebase.google.com/)
+- Add a web app to generate Firebase configuration details.
+- Create a .env file in your project's root directory with the following Firebase configuration:
+```bash
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+4.Run the development server:
+```bash
+npm run dev
+```
